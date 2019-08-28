@@ -28,12 +28,12 @@ public class GitHubAPI_Search_Example {
 		// Using GSON to parse or print response JSON.
 		gson = new GsonBuilder().setPrettyPrinting().create();
 
-//		searchFileByFileName();
+		searchFileByFileName();
 
-//		searchCodeByContent();
-//
-//		searchPullRequests();
-//
+		searchCodeByContent();
+
+		searchPullRequests();
+
 		searchCommits();
 
 	}
@@ -141,7 +141,7 @@ public class GitHubAPI_Search_Example {
 
 		Content content = request.execute().returnContent();
 		String jsonString = content.asString();
-		//System.out.println("content = " + jsonString);
+		// System.out.println("content = " + jsonString);
 
 		// To print response JSON, using GSON. Any other JSON parser can be used here.
 		Map jsonMap = gson.fromJson(jsonString, Map.class);
